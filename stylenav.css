@@ -1,0 +1,44 @@
+/* Nav tyyli */
+ul { 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: green;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+ul li {
+    float: left;
+}
+
+img#navimg {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+}
+
+.valikkotext {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+.tuloksettext {
+    position: absolute;
+    top: 40px;
+    left: 105px;
+}
+
+.eivalmistext {
+    position: absolute;
+    top: 40px;
+    left: 210px;
+}
+
+.tietojatext {
+    position: absolute;
+    top: 40px;
+    left: 270px;
+}
