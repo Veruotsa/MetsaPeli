@@ -1,0 +1,1 @@
+/**  SIvuston osien yhteiset js komponentit. Esim naviin/footeriin kuuuluvat ja pisteidenlaskenta. Tähän tiedostoon EI tehdä omia pelejä, eikä vain yhtä sivustoa koskevia asioita. */
