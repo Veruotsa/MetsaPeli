@@ -9,8 +9,9 @@ ul {
     border-radius: 10px;
     position: fixed;
     top: -10px;
-    left: 0;
+    left: 5px;
     width: auto;
+    z-index: 69;
 }
 
 ul li {
