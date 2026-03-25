@@ -5,7 +5,7 @@ body {
 
 footer {
     bottom: 0;
-    background-color: #004d40;
+    background-color: green;
     text-align: center;
     color: white;
     position: fixed;
@@ -13,6 +13,7 @@ footer {
     padding: 25px 0;
     z-index: 1000;
     line-height: 150%;
+    border-top: 3px solid #000000
 }
 
 footer p {
