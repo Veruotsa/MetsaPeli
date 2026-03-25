@@ -4,6 +4,14 @@ body {
     font-size: 14px;
 }
 
+#niitty {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
 
 @media (min-width: 768px) {
     body {
