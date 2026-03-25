@@ -1,12 +1,16 @@
 /* Nav tyyli */
-ul { 
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: green;
-  border: 3px solid black;
-  border-radius: 10px;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+    border: 3px solid black;
+    border-radius: 10px;
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: auto;
 }
 
 ul li {
@@ -21,24 +25,28 @@ img#navimg {
 
 .valikkotext {
     position: absolute;
-    top: 40px;
-    left: 20px;
+    top: 30px;
+    left: 13px;
+    color: white;
 }
 
 .tuloksettext {
     position: absolute;
-    top: 40px;
-    left: 105px;
+    top: 30px;
+    left: 93px;
+    color: white;
 }
 
 .eivalmistext {
     position: absolute;
-    top: 40px;
-    left: 210px;
+    top: 30px;
+    left: 200px;
+    color: white;
 }
 
 .tietojatext {
     position: absolute;
-    top: 40px;
-    left: 270px;
+    top: 30px;
+    left: 258px;
+    color: white;
 }
