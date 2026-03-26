@@ -2,8 +2,9 @@
 Web-projekti ryhmä 7
 
 Osalliset:
-Vertti Ruotsala
-Matti Komulainen
+Vertti Ruotsala 
+Matti Komulainen Git: MattiKhei
 Niko Haataja
+Otto Matikainen
 
 .
