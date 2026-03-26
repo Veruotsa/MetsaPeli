@@ -1,1 +1,0 @@
-/*  etusivvun js, valmistuu soon_tm */
