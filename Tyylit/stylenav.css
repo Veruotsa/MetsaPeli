@@ -1,5 +1,5 @@
 /* Nav tyyli */
-ul {
+ul#navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -8,14 +8,29 @@ ul {
     border: 3px solid black;
     border-radius: 10px;
     position: fixed;
-    top: -10px;
-    left: -1px;
+    top: -1%;
+    left: -0.1em;
     width: 100%;
     z-index: 69;
 }
 
-ul li {
+ul#navbar li {
     float: left;
+}
+
+/* media juttu joka tunnistaa onko hiiri käytössä */
+@media (pointer: fine) {
+    ul#navbar {
+        top: -9%;
+    }
+}
+
+@media (pointer: fine) {
+    ul#navbar:hover {
+        top: auto;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 img#navimg {
