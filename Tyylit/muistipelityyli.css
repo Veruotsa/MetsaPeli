@@ -7,13 +7,13 @@ img#niitty {
     z-index: 1;
 }
 
-img#kortti {
+div#pelialue {
+    z-index: 2;
+}
+
+img.card {
     width: 80px;
     height: 80px;
     z-index: 3;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
