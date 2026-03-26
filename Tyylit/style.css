@@ -1,7 +1,10 @@
-/* sivujen välisiä yhteisiä tyylejä varten esim. vakio fontit,footeri,navit yms */
+/* sivujen välisiä yhteisiä tyylejä varten esim. vakio fontit,footeri,navi yms */
+
+
 body {
     margin: 0;
     padding-bottom: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;  /*väliaikainen ratkaisu haen myöhemmin paremman - Niko */
 }
 
 footer {
