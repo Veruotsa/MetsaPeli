@@ -1,6 +1,8 @@
 img#niitty {
     width: 100vw;
+    min-width: 1000px;
     height: 100vh;
+    min-height: 600px;
     position: absolute;
     top: 0;
     left: 0;
@@ -13,12 +15,15 @@ div#pelialue {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
 img.card {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     z-index: 3;
     position: relative;
+    padding: 5px;
+    margin: 0px;
 }
