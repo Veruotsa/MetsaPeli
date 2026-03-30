@@ -30,7 +30,7 @@ html, body {
     text-decoration: none;
     border-radius: 15px;
     font-size: 1rem;
-    border: 2px solid rgba(233, 239, 232);
+    border: 2px solid rgb(0, 0, 0);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     backdrop-filter: blur(4px);
@@ -45,7 +45,7 @@ html, body {
     background: rgba(20, 120, 5, 0.9);
     transform: translateY(-5px) scale(1.05); 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    border-color: white;
+    border-color: rgb(0, 0, 0);
 }
 
 @media (max-width: 600px) {
