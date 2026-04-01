@@ -6,9 +6,13 @@ html, body {
     font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 
-#metsä {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url(../Kuvat/Metsä.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
