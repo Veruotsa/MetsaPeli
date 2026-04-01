@@ -51,3 +51,47 @@ html, body {
         font-size: 18px;
     }
 }
+
+.fish-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.drop-zone {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    border: 2px dashed #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.labels-container {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.draggable {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #333;
+    cursor: grab;
+    text-align: center;
+    border-radius: 4px;
+    color: black;
+}
+
+.correct { border: 3px solid green !important; }
+.wrong {border: 3px solid red !important; }
+
+.controls {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
