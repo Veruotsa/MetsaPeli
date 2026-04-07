@@ -60,9 +60,15 @@ img#navimg {
     color: white;
 }
 
+.elainpelitext {
+    position: absolute;
+    top: 30px;
+    left: 255px;
+    color: white;
+}
 .tietojatext {
     position: absolute;
     top: 30px;
-    left: 258px;
+    left: 340px;
     color: white;
 }
