@@ -1,14 +1,42 @@
 
 footer {
+    display: flex;
+    flex-direction: column;
     background-color: green;
-    text-align: center;
     color: white;
     width: 100%;
-    padding: 5px 0;
+    padding: 20px 10px;
     z-index: 1000;
-    line-height: 100%;
-    border-top: 3px solid #000000
+    border-top: 3px solid #000000;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
 }
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+}
+
 footer p {
     font-family: Georgia, 'Times New Roman', Times, serif;  /*väliaikainen ratkaisu haen myöhemmin paremman - Niko */
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row; 
+        justify-content: space-between; 
+        text-align: left;
+    }
 }
