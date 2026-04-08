@@ -1,95 +1,191 @@
-html, body { 
+html, body {
+
     height: 100%;
+
     margin: 0;
+
     display: flex;
+
     flex-direction: column;
-    font-family: Georgia, 'Times New Roman', Times, serif; 
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
     flex: 1;
+
 }
+
+
 
 #vesi {
+
     max-width: 100%;
+
     height: auto;
+
     display: block;
+
     margin: auto;
+
 }
+
+
 
 .game-container {
+
     position: relative;
+
     width: 100%;
+
     max-width: 100%;
+
     margin: 10px auto;
+
     flex: 1;
+
 }
 
+
+
 #ahven {
+
     position: absolute;
-    top: 50%; 
+
+    top: 50%;
+
     left: 50%;
+
     transform: translate(-50%, -50%);
+
     width: 50%;
+
     height: auto;
+
     z-index: 10;
-    pointer-events: none; 
+
+    pointer-events: none;
+
 }
+
+
 
 .fish-wrapper {
     position: relative;
+
     display: inline-block;
+
     width: 100%;
+
 }
+
+
 
 .drop-zone {
+
     position: absolute;
+
+    top: 50%;
+
+    left: 50%;
     width: 100px;
+
     height: 40px;
+
     border: 2px dashed #fff;
+
     background: rgba(255, 255, 255, 0.2);
+
     border-radius: 5px;
+
     transform: translate(-50%, -50%);
+
 }
+
+
 
 .labels-container {
+
     display: flex;
+
     flex-direction: row;    
+
     flex-wrap: wrap;        
-    justify-content: center; 
+
+    justify-content: center;
+
     gap: 10px;
+
     padding: 15px;
-    background: #f0f0f0;   
+
+    background: #f0f0f0;  
+
     width: 100%;
+
     box-sizing: border-box;
+
 }
+
+
 
 .draggable {
+
     padding: 10px;
+
     background: #fff;
+
     border: 1px solid #333;
+
     cursor: grab;
+
     text-align: center;
+
     border-radius: 4px;
+
     color: black;
+
 }
+
+
 
 .correct { border: 4px solid green !important; }
+
 .wrong {border: 4px solid red !important; }
 
+
+
 .controls {
+
     text-align: center;
+
     padding: 10px;
+
     background: white;
+
     border-top: 1px solid #ddd;
+
     flex-shrink: 0;
+
 }
 
+
+
 @media (max-width: 600px) {
+
     .drop-zone {
-        width: 70px; /* Pienemmät alueet puhelimella */
+
+        width: 70px;
+
         height: 30px;
+
     }
-    
+
+   
+
     .draggable {
-        padding: 10px; /* Hieman isompi osuma-alue sormelle */
+
+        padding: 10px;
+
         font-size: 0.8rem;
+
     }
+
 }
