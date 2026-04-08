@@ -1,191 +1,100 @@
-html, body {
-
-    height: 100%;
-
-    margin: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-    flex: 1;
-
+.game-container {
+    position: relative;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
 }
-
 
 
 #vesi {
-
-    max-width: 100%;
-
-    height: auto;
-
-    display: block;
-
-    margin: auto;
-
-}
-
-
-
-.game-container {
-
-    position: relative;
-
     width: 100%;
-
-    max-width: 100%;
-
-    margin: 10px auto;
-
-    flex: 1;
-
+    height: auto;
+    display: block;
 }
-
 
 
 #ahven {
-
     position: absolute;
-
     top: 50%;
-
     left: 50%;
-
     transform: translate(-50%, -50%);
-
-    width: 50%;
-
+    width: 60%;
     height: auto;
-
-    z-index: 10;
-
+    z-index: 2;
     pointer-events: none;
-
 }
-
-
-
-.fish-wrapper {
-    position: relative;
-
-    display: inline-block;
-
-    width: 100%;
-
-}
-
 
 
 .drop-zone {
-
     position: absolute;
-
-    top: 50%;
-
-    left: 50%;
-    width: 100px;
-
-    height: 40px;
-
-    border: 2px dashed #fff;
-
-    background: rgba(255, 255, 255, 0.2);
-
+    width: 8%;
+    height: 6%;
+    border: 2px dashed white;
+    background: rgba(255,255,255,0.2);
     border-radius: 5px;
-
     transform: translate(-50%, -50%);
-
+    z-index: 3;
 }
-
 
 
 .labels-container {
-
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-
-    flex-direction: row;    
-
-    flex-wrap: wrap;        
-
+    flex-wrap: wrap;
     justify-content: center;
-
-    gap: 10px;
-
-    padding: 15px;
-
-    background: #f0f0f0;  
-
-    width: 100%;
-
-    box-sizing: border-box;
-
+    gap: 8px;
+    width: 90%;
+    z-index: 4;
 }
-
 
 
 .draggable {
-
-    padding: 10px;
-
-    background: #fff;
-
-    border: 1px solid #333;
-
+    padding: 6px 10px;
+    background: white;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     cursor: grab;
-
-    text-align: center;
-
     border-radius: 4px;
-
-    color: black;
-
+    backdrop-filter: blur(3px);
 }
-
-
-
-.correct { border: 4px solid green !important; }
-
-.wrong {border: 4px solid red !important; }
-
-
 
 .controls {
-
-    text-align: center;
-
-    padding: 10px;
-
-    background: white;
-
-    border-top: 1px solid #ddd;
-
-    flex-shrink: 0;
-
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    z-index: 5;
+    background: rgba(255,255,255,0.7);
+    padding: 8px;
+    border-radius: 6px;
 }
 
 
+.correct { border: 3px solid lime !important; }
+.wrong { border: 3px solid red !important; }
 
 @media (max-width: 600px) {
 
-    .drop-zone {
-
-        width: 70px;
-
-        height: 30px;
-
+    #ahven {
+        width: 60%;
     }
 
-   
+    .drop-zone {
+        width: 12%;
+        height: 8%;
+    }
 
     .draggable {
-
-        padding: 10px;
-
-        font-size: 0.8rem;
-
+        font-size: 0.7rem;
+        padding: 5px 6px;
     }
+
+    .labels-container {
+        bottom: 2%;
+        gap: 5px;
+    }
+
 
 }
