@@ -1,6 +1,10 @@
 // Sivuston osien yhteiset js komponentit. Esim naviin/footeriin kuuuluvat ja pisteidenlaskenta. Tähän tiedostoon EI tehdä omia pelejä, eikä vain yhtä sivustoa koskevia asioita.
 
 
+
+//nimetkää pelinne tähän tauluun. Nimi on se muuttuja jolla kutsutte pelinne sisältä tallennusfunktiota
+const pelit=['eväpeli','lintupeli','kasvipeli','eläinpeli']
+
 //tallentaa pelien pisteet localstorageen
 //kutsukaa tätä peleissänne tallentaaksenne lopputulokset
 function tallenna(pelinimi, pisteet) {
@@ -10,12 +14,11 @@ function tallenna(pelinimi, pisteet) {
 
 }
 //hakee kaikki pistetulokset yhteen olioon
-const pelit=['eväpeli','lintupeli','kasvipeli','eläinpeli']
 function haepisteet(){
     pelipisteet={}
-    for(let i of pelit){
-        let = tilanne = localStorage.getItem(i)
-        let = pelipisteet[i] = tilanne
+    for(let nimi of pelit){
+        let = tilanne = localStorage.getItem(nimi)
+        let = pelipisteet[nimi] = tilanne
 
     }
 
