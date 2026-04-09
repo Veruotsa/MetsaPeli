@@ -21,11 +21,17 @@ let turnedCards = 0;
 
 let waitTimer = false;
 
+let Card1 = null;
+let Card2 = null;
+
+let kortti1 = document.querySelector("#kortti1");
+kortti1.addEventListener('click', turncard1);
+
 function turncard1() {
     if (waitTimer) return;
     if (kortti1state == 1) return;
 
-    kortti1.src = "../Kuvat/kissankello.png";
+    kortti1.src = "../Kuvat/Kasvit/2.png";
     kortti1state = 1;
     turnedCards++;
     checkturned();
@@ -38,7 +44,7 @@ function turncard2() {
     if (waitTimer) return;
     if (kortti2state == 1) return;
 
-    kortti2.src = "../Kuvat/kissankello.png";
+    kortti2.src = "../Kuvat/Kasvit/6.png";
     kortti2state = 1;
     turnedCards++;
     checkturned();
@@ -51,7 +57,7 @@ function turncard3() {
     if (waitTimer) return;
     if (kortti3state == 1) return;
 
-    kortti3.src = "../Kuvat/kissankello.png";
+    kortti3.src = "../Kuvat/Kasvit/7.png";
     kortti3state = 1;
     turnedCards++;
     checkturned();
@@ -64,7 +70,7 @@ function turncard4() {
     if (waitTimer) return;
     if (kortti4state == 1) return;
 
-    kortti4.src = "../Kuvat/kissankello.png";
+    kortti4.src = "../Kuvat/Kasvit/4.png";
     kortti4state = 1;
     turnedCards++;
     checkturned();
@@ -77,7 +83,7 @@ function turncard5() {
     if (waitTimer) return;
     if (kortti5state == 1) return;
 
-    kortti5.src = "../Kuvat/kissankello.png";
+    kortti5.src = "../Kuvat/Kasvit/5.png";
     kortti5state = 1;
     turnedCards++;
     checkturned();
@@ -90,7 +96,7 @@ function turncard6() {
     if (waitTimer) return;
     if (kortti6state == 1) return;
 
-    kortti6.src = "../Kuvat/kissankello.png";
+    kortti6.src = "../Kuvat/Kasvit/8.png";
     kortti6state = 1;
     turnedCards++;
     checkturned();
@@ -103,7 +109,7 @@ function turncard7() {
     if (waitTimer) return;
     if (kortti7state == 1) return;
 
-    kortti7.src = "../Kuvat/kissankello.png";
+    kortti7.src = "../Kuvat/Kasvit/1.png";
     kortti7state = 1;
     turnedCards++;
     checkturned();
@@ -116,7 +122,7 @@ function turncard8() {
     if (waitTimer) return;
     if (kortti8state == 1) return;
 
-    kortti8.src = "../Kuvat/kissankello.png";
+    kortti8.src = "../Kuvat/Kasvit/6.png";
     kortti8state = 1;
     turnedCards++;
     checkturned();
@@ -129,7 +135,7 @@ function turncard9() {
     if (waitTimer) return;
     if (kortti9state == 1) return;
 
-    kortti9.src = "../Kuvat/kissankello.png";
+    kortti9.src = "../Kuvat/Kasvit/3.png";
     kortti9state = 1;
     turnedCards++;
     checkturned();
@@ -142,7 +148,7 @@ function turncard10() {
     if (waitTimer) return;
     if (kortti10state == 1) return;
 
-    kortti10.src = "../Kuvat/kissankello.png";
+    kortti10.src = "../Kuvat/Kasvit/5.png";
     kortti10state = 1;
     turnedCards++;
     checkturned();
@@ -155,7 +161,7 @@ function turncard11() {
     if (waitTimer) return;
     if (kortti11state == 1) return;
 
-    kortti11.src = "../Kuvat/kissankello.png";
+    kortti11.src = "../Kuvat/Kasvit/7.png";
     kortti11state = 1;
     turnedCards++;
     checkturned();
@@ -168,7 +174,7 @@ function turncard12() {
     if (waitTimer) return;
     if (kortti12state == 1) return;
 
-    kortti12.src = "../Kuvat/kissankello.png";
+    kortti12.src = "../Kuvat/Kasvit/3.png";
     kortti12state = 1;
     turnedCards++;
     checkturned();
@@ -181,7 +187,7 @@ function turncard13() {
     if (waitTimer) return;
     if (kortti13state == 1) return;
 
-    kortti13.src = "../Kuvat/kissankello.png";
+    kortti13.src = "../Kuvat/Kasvit/2.png";
     kortti13state = 1;
     turnedCards++;
     checkturned();
@@ -194,7 +200,7 @@ function turncard14() {
     if (waitTimer) return;
     if (kortti14state == 1) return;
 
-    kortti14.src = "../Kuvat/kissankello.png";
+    kortti14.src = "../Kuvat/Kasvit/1.png";
     kortti14state = 1;
     turnedCards++;
     checkturned();
@@ -207,9 +213,10 @@ function turncard15() {
     if (waitTimer) return;
     if (kortti15state == 1) return;
 
-    kortti15.src = "../Kuvat/kissankello.png";
+    kortti15.src = "../Kuvat/Kasvit/8.png";
     kortti15state = 1;
     turnedCards++;
+    checkturned();
 }
 
 let kortti16 = document.querySelector("#kortti16");
@@ -219,9 +226,10 @@ function turncard16() {
     if (waitTimer) return;
     if (kortti16state == 1) return;
 
-    kortti16.src = "../Kuvat/kissankello.png";
+    kortti16.src = "../Kuvat/Kasvit/4.png";
     kortti16state = 1;
     turnedCards++;
+    checkturned();
 }
 
 function returnCards() {
@@ -243,8 +251,8 @@ function returnCards() {
     if (kortti15state === 1) { kortti15.src = "../Kuvat/kortti.png"; kortti15state = 0; }
     if (kortti16state === 1) { kortti16.src = "../Kuvat/kortti.png"; kortti16state = 0; }
 
-    turnedcards = 0;
-    waiting = false;
+    turnedCards = 0;
+    waitTimer = false;
 }
 
 function checkturned() {
