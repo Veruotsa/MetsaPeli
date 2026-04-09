@@ -1,24 +1,26 @@
+
 .game-container {
     position: relative;
     width: 100%;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
 }
-
 
 #vesi {
     width: 100%;
     height: auto;
     display: block;
+    position: relative; 
+    z-index: 1;
 }
 
-
+/* Kalan asema */
 #ahven {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 50%;
     height: auto;
     z-index: 2;
     pointer-events: none;
@@ -33,9 +35,8 @@
     background: rgba(255,255,255,0.2);
     border-radius: 5px;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 3; 
 }
-
 
 .labels-container {
     position: absolute;
@@ -47,54 +48,132 @@
     justify-content: center;
     gap: 8px;
     width: 90%;
-    z-index: 4;
+    z-index: 4; 
 }
 
 
 .draggable {
-    padding: 6px 10px;
+    padding: 14px 15px;
     background: white;
     border: 2px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: grab;
-    border-radius: 4px;
+    border-radius: 5px;
     backdrop-filter: blur(3px);
 }
 
+
 .controls {
     position: absolute;
-    top: 80%;
+    bottom: 5%;
     right: 5%;
     z-index: 5;
-    background: rgba(255,255,255,0.7);
+    background: rgb(255, 255, 255);
     padding: 8px;
     border-radius: 6px;
+    border: 3px solid rgb(33, 87, 4);
+    width: fit-content;
 }
-
 
 .correct { border: 3px solid lime !important; }
 .wrong { border: 3px solid red !important; }
 
 @media (max-width: 600px) {
-
-    #ahven {
-        width: 60%;
+    .game-container {
+        position: relative;
+        width: 100%;
+        height: 600px; 
+        overflow: hidden;
+        display: block;
     }
 
+    #vesi {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+ 
+    #ahven {
+        width: 80%;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+
     .drop-zone {
-        width: 12%;
-        height: 8%;
+        width: 15%;
+        height: 5%;
+        z-index: 3;
+    }
+
+
+    .labels-container {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        gap: 8px;
+        z-index: 4;
+        height: auto;
     }
 
     .draggable {
-        font-size: 0.7rem;
-        padding: 5px 6px;
+        font-size: 0.75rem;
+        padding: 6px 8px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        height: auto;
     }
 
-    .labels-container {
-        bottom: 2%;
-        gap: 5px;
+
+    .controls {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 280px;
+        padding: 10px;
+        z-index: 5;
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid rgb(33, 87, 4);
     }
 
+    .dz-selka {
+        top: 40% !important;   
+        left: 60% !important;  
+    }
 
+    .dz-pyrsto {
+        top: 49% !important;
+        left: 20% !important;
+    }
+
+    .dz-pera {
+        top: 55% !important;
+        left: 38% !important;
+    }
+
+    .dz-vatsa {
+        top: 60% !important;
+        left: 60% !important;
+    }
+
+    .dz-rinta {
+        top: 52% !important;
+        left: 70% !important;
+    }
 }
