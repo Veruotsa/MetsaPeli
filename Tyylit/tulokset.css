@@ -3,3 +3,41 @@ body{
     flex-direction: column;
     background-image:url(../Kuvat/nickype-tree-trunk-4545438.jpg);
 }
+
+main{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap:1rem
+}
+
+.resultbox{
+    padding:1rem;
+    border: 4px,solid black;
+    border-color: black;
+    background-color: gray;
+    text-align: center;
+}
+
+#tulosboxit{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap: 1rem;
+    width:100%;
+    max-width: 800px;
+
+}
+
+#yleistulos{
+    background-color: gray;
+    padding: 2rem;
+    border:1px solid black;
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+
+}
+
+
