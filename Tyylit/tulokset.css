@@ -1,0 +1,5 @@
+body{
+    display:flex;
+    flex-direction: column;
+    background-image:url(../Kuvat/nickype-tree-trunk-4545438.jpg);
+}
