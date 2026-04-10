@@ -4,7 +4,7 @@ cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
 
-let pisteet = 0;
+let parit = 0;
 
 let Card1 = null;
 let Card2 = null;
@@ -50,11 +50,13 @@ function flipCard() {
         lukitus = false;
         Card1 = null;
         Card2 = null;
-        pisteet++;
-        document.getElementById("pisteTeksti").textContent = "Parit: " + pisteet;
-        setTimeout(() => {
-            return;
-        }, 1500);
+        parit++;
+        document.getElementById("paritTeksti").textContent = "Parit: " + parit;
+        // peli loppuu
+        if (parit === 8) {
+            stopTimer();
+            pistelasku();
+        }
     } else {
         setTimeout(() => {
             Card1.src = "../Kuvat/kortti.png";
@@ -62,6 +64,45 @@ function flipCard() {
             lukitus = false;
             Card1 = null;
             Card2 = null;
-        }, 1500);
+        }, 1000);
     }
 };
+
+// ajastin
+let running = false;
+let startTime = 0;
+let timer = 0;
+
+function startTimer() {
+    running = true;
+    startTime = performance.now();
+    requestAnimationFrame(loop);
+}
+
+function loop(t) {
+    if (!running) return;
+    timer = (t - startTime) / 1000;
+    const elapsed = timer.toFixed(0);
+    document.getElementById("timer").textContent = elapsed + " s";
+    requestAnimationFrame(loop);
+}
+
+function stopTimer() {
+    running = false;
+}
+
+startTimer();
+
+// piste funktio
+function pistelasku() {
+    let pisteet = 10;
+
+    if (timer <= 25) {
+        pisteet = 10;
+    } else {
+        pisteet = Math.max(1, 10 - (timer - 25) * 0.2);
+    }
+
+    document.getElementById("paritTeksti").textContent =
+    "Pisteet: " + Math.round(pisteet);
+}

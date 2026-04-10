@@ -36,13 +36,20 @@ div#pisteet {
     top: 40%;
     left: 80%;
     transform: translate(-50%, -50%);
-    height: 70px;
-    width: 150px;
+    height: 6em;
+    width: 9em;
     background-color: cyan;
     display: flex;
     border-radius: 5px;
     margin: 5px;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h2 {
+    margin: 0;
 }
 
 @media (max-width: 900px) {
@@ -51,9 +58,25 @@ div#pisteet {
         left: 50%;
         transform: translate(-50%, -90%);
     }
+
     div#pelialue {
         top: 40%;
         left: 50%;
         transform: translate(-50%, -40%);
     }
+
+    button#uusinta {
+        top: 90%;
+        left: 35%;
+        transform: translate(-50%, -90%);
+    }
+}
+
+#uusinta {
+    height: 4em;
+    width: 4em;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
 }
