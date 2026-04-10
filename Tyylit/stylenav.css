@@ -72,3 +72,32 @@ img#navimg {
     left: 340px;
     color: white;
 }
+
+/* pienet kuvakkeet pienille näytöille */
+@media (max-width: 400px) {
+    .valikkotext {
+        top: 27px;
+        left: 10px;
+    }
+    .tuloksettext {
+        top: 27px;
+        left: 87px;
+    }
+    .kalapelitext {
+        top: 27px;
+        left: 165px;
+    }
+    .elainpelitext {
+        top: 27px;
+        left: 235px;
+    }
+    .tietojatext {
+        top: 27px;
+        left: 315px;
+    }
+    img#navimg {
+        width: 35px;
+        height: 35px;
+        margin: 20px;
+    }
+}

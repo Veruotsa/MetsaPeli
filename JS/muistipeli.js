@@ -52,7 +52,7 @@ function flipCard() {
         Card1 = null;
         Card2 = null;
         pisteet++;
-        document.getElementById("pisteTeksti").textContent = "Pisteet: " + pisteet;
+        document.getElementById("pisteTeksti").textContent = "Parit: " + pisteet;
         setTimeout(() => {
             return;
         }, 1500);

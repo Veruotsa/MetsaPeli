@@ -44,3 +44,16 @@ div#pisteet {
     margin: 5px;
     justify-content: center;
 }
+
+@media (max-width: 900px) {
+    div#pisteet {
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+    }
+    div#pelialue {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+}
