@@ -29,3 +29,18 @@ img.card {
     z-index: 3;
     object-fit: contain;
 }
+
+div#pisteet {
+    z-index: 5;
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    height: 70px;
+    width: 150px;
+    background-color: cyan;
+    display: flex;
+    border-radius: 5px;
+    margin: 5px;
+    justify-content: center;
+}
