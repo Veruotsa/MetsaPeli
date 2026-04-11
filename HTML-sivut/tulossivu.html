@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,28 @@
     <link rel="stylesheet" href="../Tyylit/style.css">
     <link rel="stylesheet" href="../Tyylit/stylenav.css">
     <link rel="stylesheet" href="../Tyylit/tulokset.css">
-    <script src ="../JS/common.js" defer></script>
+    <script src="../JS/common.js" defer></script>
     <script src="../JS/tulokset.js" defer></script>
 </head>
+
 <body>
-     <div>
+    <div>
         <ul id="navbar">
-            <li><a href="index.html"><img src="../Kuvat/leaf.png" alt="Valikko" id="navimg"></a></li>
-            <a href=".html" class="valikkotext">Valikko</a>
-            <!--tulevaisuudessa linkit kyseisille sivuille-->
-            <li><a href=".html"><img src="../Kuvat/sun.png" alt="Tulokset" id="navimg"></a></li>
-            <a href=".html" class="tuloksettext">Tulokset</a>
+            <li><a href="../HTML-sivut/etusivu.html"><img src="../Kuvat/leaf.png" alt="Etusivu" id="navimg"></a></li>
+            <a href="../HTML-sivut/etusivu.html" class="etusivutext">Etusivu</a>
 
-            <li><a href="../HTML-sivut/Matinkalapeli.html"><img src="../Kuvat/fish.png" alt="Kalapeli" id="navimg"></a></li>
-            <a href="../HTML-sivut/Matinkalapeli.html" class="kalapelitext">kalapeli</a>
+            <li><a href="../HTML-sivut/tulokset.html"><img src="../Kuvat/sun.png" alt="Tulokset" id="navimg"></a></li>
+            <a href="../HTML-sivut/tulokset.html" class="tuloksettext">Tulokset</a>
 
-            <li><a href=".html"><img src="../Kuvat/stump.png" alt="Tietoja" id="navimg"></a></li>
-            <a href=".html" class="tietojatext">Tietoja</a>
+            <li><a href="../HTML-sivut/pelinavigointi.html"><img src="../Kuvat/fish.png" alt="Pelit" id="navimg"></a>
+            </li>
+            <a href="../HTML-sivut/pelinavigointi.html" class="pelittext">Pelit</a>
 
+            <li><a href="../HTML-sivut/tietoja.html"><img src="../Kuvat/stump.png" alt="Tietoja" id="navimg"></a></li>
+            <a href="../HTML-sivut/tietoja.html" class="tietojatext">Tietoja</a>
         </ul>
     </div>
-    
+
     <main>
         <div id="yleistulos" class="resultbox">
             <h1 class="tulosotsikot">Pelien tulokset</h1>
@@ -44,12 +46,12 @@
                 <h1 class="tulosotsikot">Lintupelin tulokset</h1>
                 <p> Lintupelistä sait pisteitä : </p>
             </div>
-        
+
             <div id="kasvitulos" class="resultbox">
                 <h1 class="tulosotsikot">Kasvipelin tulokset</h1>
                 <p> Kasvipelistä sait pisteitä : </p>
             </div>
-            
+
             <div id="eläintulos" class="resultbox">
                 <h1 class="tulosotsikot">Eläinpelin tulokset</h1>
                 <p> Eläinpelistä sait pisteitä : </p>
@@ -59,10 +61,12 @@
         <button id="clear">Nollaa pelit</button>
     </main>
     <div class="footer-content">
-            <footer>
-                <p><strong>Tekijät:</strong> Vertti Ruotsala, Niko Haataja, Matti Komulainen ja Otto Matikainen</p>
-                <p>© 2026 Metsäpeli - Lisensoitu <a href="https://creativecommons.org/licenses/by/4.0/deed.fi" target="_blank" rel="License noopener noreferrer"> CC BY 4.0</a> -lisenssillä</p>
-            </footer>
-        </div>
+        <footer>
+            <p><strong>Tekijät:</strong> Vertti Ruotsala, Niko Haataja, Matti Komulainen ja Otto Matikainen</p>
+            <p>© 2026 Metsäpeli - Lisensoitu <a href="https://creativecommons.org/licenses/by/4.0/deed.fi"
+                    target="_blank" rel="License noopener noreferrer"> CC BY 4.0</a> -lisenssillä</p>
+        </footer>
+    </div>
 </body>
+
 </html>

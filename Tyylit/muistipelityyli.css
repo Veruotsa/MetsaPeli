@@ -2,7 +2,7 @@ img#niitty {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 1;
@@ -34,7 +34,7 @@ div#pisteet {
     z-index: 5;
     position: absolute;
     top: 40%;
-    left: 80%;
+    left: 85%;
     transform: translate(-50%, -50%);
     height: 6em;
     width: 9em;
@@ -79,4 +79,12 @@ h2 {
     border: none;
     background-color: white;
     cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+    div#pisteet {
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+    }
 }

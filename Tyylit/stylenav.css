@@ -21,7 +21,7 @@ ul#navbar li {
 /* media juttu joka tunnistaa onko hiiri käytössä */
 @media (pointer: fine) {
     ul#navbar {
-        top: -9%;
+        top: -7vh;
     }
 }
 
@@ -39,7 +39,7 @@ img#navimg {
     margin: 20px;
 }
 
-.valikkotext {
+.etusivutext {
     position: absolute;
     top: 30px;
     left: 13px;
@@ -53,23 +53,17 @@ img#navimg {
     color: white;
 }
 
-.kalapelitext {
+.pelittext {
     position: absolute;
     top: 30px;
-    left: 180px;
+    left: 185px;
     color: white;
 }
 
-.elainpelitext {
-    position: absolute;
-    top: 30px;
-    left: 255px;
-    color: white;
-}
 .tietojatext {
     position: absolute;
     top: 30px;
-    left: 340px;
+    left: 256px;
     color: white;
 }
 
@@ -87,13 +81,9 @@ img#navimg {
         top: 27px;
         left: 165px;
     }
-    .elainpelitext {
-        top: 27px;
-        left: 235px;
-    }
     .tietojatext {
         top: 27px;
-        left: 315px;
+        left: 235px;
     }
     img#navimg {
         width: 35px;
