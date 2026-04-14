@@ -79,9 +79,9 @@ function startTimer() {
     requestAnimationFrame(loop);
 }
 
-function loop(t) {
+function loop(blaa) {
     if (!running) return;
-    timer = (t - startTime) / 1000;
+    timer = (blaa - startTime) / 1000;
     const elapsed = timer.toFixed(0);
     document.getElementById("timer").textContent = elapsed + " s";
     requestAnimationFrame(loop);
@@ -102,7 +102,17 @@ function pistelasku() {
     } else {
         pisteet = Math.max(1, 10 - (timer - 25) * 0.2);
     }
+    // pisteen tallennus vain jos parempi
+    let paras = Number(localStorage.getItem("muistipelipiste"));
+    if (isNaN(paras)) paras = 0;
+
+    if (pisteet > paras) {
+        localStorage.setItem("muistipelipiste", pisteet);
+    }
+    else {
+        pisteet = paras;
+    }
 
     document.getElementById("paritTeksti").textContent =
-    "Pisteet: " + Math.round(pisteet);
+        "Pisteet: " + Math.round(pisteet);
 }
