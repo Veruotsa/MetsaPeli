@@ -37,17 +37,18 @@ main{
     background-color: gray;
     padding: 2rem;
     border:3px solid black;
-    width: 100%;
-    max-width: 800px;
+    width: 35vw;
+    min-width: 200px;
     align-items: center;
     border-radius: 10px;
 }
 
 button{
-    background-color:rgb(170, 20, 20);
-    border:1px solid black;
-    padding: 20px;
-    border-radius: 5px;
+    background-color:rgb(140, 20, 20);
+    border: 5px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
     font-style: italic;
 }
 

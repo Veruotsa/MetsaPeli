@@ -101,15 +101,14 @@ function pistelasku() {
         pisteet = Math.max(1, 10 - (timer - 25) * 0.2);
     }
     // pisteen tallennus vain jos parempi
-    let paras = Number(localStorage.getItem("muistipelipiste"));
+    let paras = Number(localStorage.getItem("kasvipeli"));
     if (isNaN(paras)) paras = 0;
 
     document.getElementById("paritTeksti").textContent =
     "Pisteet: " + Math.round(pisteet);
 
-    // muistipelipiste  <-- tuo tallennettu
     if (pisteet > paras) {
-        localStorage.setItem("muistipelipiste", pisteet);
+        tallenna("kasvipeli", pisteet);
     }
     else {
         pisteet = paras;
