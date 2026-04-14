@@ -36,6 +36,7 @@ footer p {
         font-size: 0.8rem; 
         padding: 0 10px;
         word-wrap: break-word; 
+        text-align: center;
     }
 
     .footer-content {
