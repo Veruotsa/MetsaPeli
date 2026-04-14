@@ -32,8 +32,6 @@ function flipCard() {
 
     if (this === Card1) return;
 
-    console.log("click " + this.id);
-
     this.src = "../Kuvat/Kasvit/" + numbers[this.id - 1] + ".png";
 
     if (!Card1) {
@@ -79,9 +77,9 @@ function startTimer() {
     requestAnimationFrame(loop);
 }
 
-function loop(t) {
+function loop(blaa) {
     if (!running) return;
-    timer = (t - startTime) / 1000;
+    timer = (blaa - startTime) / 1000;
     const elapsed = timer.toFixed(0);
     document.getElementById("timer").textContent = elapsed + " s";
     requestAnimationFrame(loop);
@@ -102,7 +100,17 @@ function pistelasku() {
     } else {
         pisteet = Math.max(1, 10 - (timer - 25) * 0.2);
     }
+    // pisteen tallennus vain jos parempi
+    let paras = Number(localStorage.getItem("muistipelipiste"));
+    if (isNaN(paras)) paras = 0;
 
     document.getElementById("paritTeksti").textContent =
     "Pisteet: " + Math.round(pisteet);
+
+    if (pisteet > paras) {
+        localStorage.setItem("muistipelipiste", pisteet);
+    }
+    else {
+        pisteet = paras;
+    }
 }

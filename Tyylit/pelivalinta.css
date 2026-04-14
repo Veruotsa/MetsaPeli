@@ -1,7 +1,6 @@
-/*pelivalinnan tyylit*/
+
 html, body { 
     height: 100%;
-    margin: 0;
     display: flex;
     flex-direction: column;
     font-family: Georgia, 'Times New Roman', Times, serif; 
@@ -24,8 +23,8 @@ html, body {
 
 .nav-box {
     position: absolute;
-    background: rgba(25, 199, 31, 0.3);
-    color: rgb(255, 255, 255);
+    background: rgba(19, 130, 2, 0.4);
+    color: rgb(0, 0, 0);
     padding: 50px 60px;
     text-decoration: none;
     border-radius: 15px;
@@ -49,21 +48,55 @@ html, body {
 }
 
 @media (max-width: 600px) {
+    body {
+
+        margin: 0;
+        padding: 5px; 
+        background-color: white; 
+        display: block;
+        min-height: auto;
+    }
+
+    .game-container {
+        position: relative;
+        width: 100%;
+        height: 70vh; 
+        overflow: visible;
+        margin-top: 10px;
+        margin-bottom: 0;
+        z-index: 1;
+    }
+
+    #vesi, #niitty {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    
     .nav-box {
-        font-size: 0.8rem;
-        padding: 3px 10px;
+        position: absolute; 
+        z-index: 10 !important; 
+        padding: 10px 14px !important;
+        font-size: 0.85rem !important;
+        background: rgba(19, 130, 2, 0.85) !important; 
+        color: white !important;
+        border: 1px solid black !important;
+        text-align: center;
+        text-decoration: none;
+        display: block !important;
     }
-}
 
-@media (min-width: 768px) {
-    body {
-        font-size: 16px;
+   
+    .forest { top: 28% !important; left: 10% !important; }
+    .meadow { top: 36% !important; right: 10% !important; }
+    .lake { top: 70% !important; left: 50% !important; transform: translate(-50%, -50%) !important; }
+    .sky { top: 15% !important; right: 5% !important; }
+
+    footer {
+        text-align: center;
     }
-}
-
-
-@media (min-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-}
