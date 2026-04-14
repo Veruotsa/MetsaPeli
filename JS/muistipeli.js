@@ -107,6 +107,7 @@ function pistelasku() {
     document.getElementById("paritTeksti").textContent =
     "Pisteet: " + Math.round(pisteet);
 
+    // muistipelipiste  <-- tuo tallennettu
     if (pisteet > paras) {
         localStorage.setItem("muistipelipiste", pisteet);
     }

@@ -2,6 +2,8 @@ body{
     display:flex;
     flex-direction: column;
     background-image:url(../Kuvat/nickype-tree-trunk-4545438.jpg);
+    background-size: cover;
+    z-index: -1;
 }
 
 main{
@@ -19,8 +21,8 @@ main{
     padding:1rem;
     border: 4px,solid black;
     border-color: black;
-    background-color: gray;
     text-align: center;
+    border-radius: 10px;
 }
 
 #tulosrakenne{
@@ -29,28 +31,38 @@ main{
     gap: 1rem;
     width:100%;
     max-width: 1000px;
-
 }
 
 #yleistulos{
     background-color: gray;
     padding: 2rem;
-    border:1px solid black;
+    border:3px solid black;
     width: 100%;
     max-width: 800px;
     align-items: center;
-
+    border-radius: 10px;
 }
 
 button{
-    background-color:gray;
+    background-color:rgb(170, 20, 20);
     border:1px solid black;
-    padding: 5px 10px;
-
-
+    padding: 20px;
+    border-radius: 5px;
+    font-style: italic;
 }
 
+#kalatulos{
+    background-color: lightblue;
+}
 
+#lintutulos{
+    background-color: cyan;
+}
 
+#kasvitulos{
+    background-color: lightgreen;
+}
 
-
+#elaintulos{
+    background-color: lightyellow;
+}
