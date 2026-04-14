@@ -1,7 +1,6 @@
 /*pelivalinnan tyylit*/
 html, body { 
     height: 100%;
-    margin: 0;
     display: flex;
     flex-direction: column;
     font-family: Georgia, 'Times New Roman', Times, serif; 
@@ -24,8 +23,8 @@ html, body {
 
 .nav-box {
     position: absolute;
-    background: rgba(25, 199, 31, 0.3);
-    color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255, 0.1);
+    color: rgb(0, 0, 0);
     padding: 50px 60px;
     text-decoration: none;
     border-radius: 15px;

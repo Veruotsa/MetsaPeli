@@ -33,10 +33,3 @@ footer a {
     text-decoration: underline;
 }
 
-@media (min-width: 768px) {
-    .footer-content {
-        flex-direction: row; 
-        justify-content: space-between; 
-        text-align: left;
-    }
-}
