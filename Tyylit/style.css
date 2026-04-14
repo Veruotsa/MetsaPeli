@@ -1,3 +1,7 @@
+body{
+     font-family:Garamond,Georgia, Times, serif;  /*väliaikainen ratkaisu haen myöhemmin paremman - Niko */
+}
+
 
 footer {
     display: flex;
@@ -22,7 +26,7 @@ footer {
 }
 
 footer p {
-    font-family: Georgia, 'Times New Roman', Times, serif;  /*väliaikainen ratkaisu haen myöhemmin paremman - Niko */
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     line-height: 1.5;
     font-size: 0.9rem;
