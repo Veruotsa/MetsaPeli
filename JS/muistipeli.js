@@ -32,8 +32,6 @@ function flipCard() {
 
     if (this === Card1) return;
 
-    console.log("click " + this.id);
-
     this.src = "../Kuvat/Kasvit/" + numbers[this.id - 1] + ".png";
 
     if (!Card1) {
@@ -106,13 +104,13 @@ function pistelasku() {
     let paras = Number(localStorage.getItem("muistipelipiste"));
     if (isNaN(paras)) paras = 0;
 
+    document.getElementById("paritTeksti").textContent =
+    "Pisteet: " + Math.round(pisteet);
+
     if (pisteet > paras) {
         localStorage.setItem("muistipelipiste", pisteet);
     }
     else {
         pisteet = paras;
     }
-
-    document.getElementById("paritTeksti").textContent =
-        "Pisteet: " + Math.round(pisteet);
 }
