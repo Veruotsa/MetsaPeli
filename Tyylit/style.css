@@ -1,42 +1,45 @@
-
 footer {
     display: flex;
     flex-direction: column;
     background-color: green;
     color: white;
     width: 100%;
-    padding: 20px 10px;
+    padding: 20px 0; 
     z-index: 1000;
     border-top: 3px solid #000000;
     align-items: center;
     box-sizing: border-box;
     position: relative;
+    margin-top: auto; 
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
+
+    max-width: 100%;
 }
 
 footer p {
-    font-family: Georgia, 'Times New Roman', Times, serif;  /*väliaikainen ratkaisu haen myöhemmin paremman - Niko */
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
-    line-height: 1.5;
-    font-size: 0.9rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
 }
 
-footer a {
-    color: #e0e0e0;
-    text-decoration: underline;
-}
+@media (max-width: 600px) {
 
-@media (min-width: 768px) {
+    footer p {
+        font-size: 0.8rem; 
+        padding: 0 10px;
+        word-wrap: break-word; 
+        text-align: center;
+    }
+
     .footer-content {
-        flex-direction: row; 
-        justify-content: space-between; 
-        text-align: left;
+        gap: 5px; 
     }
 }
