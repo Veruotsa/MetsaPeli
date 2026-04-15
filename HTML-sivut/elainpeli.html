@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELainpeli</title>
+    <title>Elainpeli</title>
     <link rel="stylesheet" href="../Tyylit/elainpeli.css">
     <link rel="stylesheet" href="../Tyylit/style.css">
     <link rel="stylesheet" href="../Tyylit/stylenav.css">
@@ -17,19 +17,67 @@
             <li><a href="../HTML-sivut/tulokset.html"><img src="../Kuvat/sun.png" alt="Tulokset" id="navimg"></a></li>
             <a href="../HTML-sivut/tulokset.html" class="tuloksettext">Tulokset</a>
 
-            <li><a href="../HTML-sivut/pelinavigointi.html"><img src="../Kuvat/fish.png" alt="Pelit" id="navimg"></a></li>
+            <li><a href="../HTML-sivut/pelinavigointi.html"><img src="../Kuvat/fish.png" alt="Pelit" id="navimg"></a>
+            </li>
             <a href="../HTML-sivut/pelinavigointi.html" class="pelittext">Pelit</a>
 
             <li><a href="../HTML-sivut/tietoja.html"><img src="../Kuvat/stump.png" alt="Tietoja" id="navimg"></a></li>
             <a href="../HTML-sivut/tietoja.html" class="tietojatext">Tietoja</a>
         </ul>
-    </div>
+     </div>
 
     
 
 
     
-    
+    <main>
+        
+        <div class="game-container">
+
+            <div class="header-row">
+
+                <button class="title-btn">
+                    Tunnista eläin
+                </button>
+
+                <div class="timer box">
+                    <div id="questionCounter">
+                        1/8
+                    </div>
+
+                    <div id="time">
+                        1:00
+                    </div>
+             </div>
+
+             <img
+                id="animalImage"
+                src="../Kuvat/karhu.png"
+                alt="Eläin"
+                >
+            
+
+                    
+
+        </div>
+
+        
+    <input
+        type="text"
+        id="answerInput"
+        class="answer-box"
+        placeholder="Kirjoita eläin..."
+    >
+
+         <button
+        onclick="checkAnswer()"
+        class="check-btn"
+    >
+        Tarkista vastaus
+    </button>
+        </div>
+
+    </main>
      <footer>
         <p><strong>Tekijät:</strong> Vertti Ruotsala, Niko Haataja, Matti Komulainen ja Otto Matikainen</p>
         <p>© 2026 Metsäpeli - Lisensoitu <a href="https://creativecommons.org/licenses/by/4.0/deed.fi" target="_blank" rel="License noopener noreferrer"> CC BY 4.0</a> -lisenssillä</p>
