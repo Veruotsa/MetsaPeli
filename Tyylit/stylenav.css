@@ -21,7 +21,7 @@ ul#navbar li {
 /* media juttu joka tunnistaa onko hiiri käytössä */
 @media (pointer: fine) {
     ul#navbar {
-        top: -7vh;
+        top: -60px;
     }
 }
 
