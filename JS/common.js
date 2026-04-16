@@ -28,7 +28,6 @@ function haepisteet(){
 
 
 //(kesken)tarkistaa onko kaikki pelit pelattu tulosssivulle siirtymistä varten
-//ottaa kaikki pisteet kasaan yhteen tauluun
 //jos tarkistus menee läpi niin pelivalinnassa tulee ilmoitus pelaajalle ja pyytää siirtymään koostesivulle
 function tarkista(){
 
