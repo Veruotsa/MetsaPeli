@@ -12,6 +12,8 @@ ul#navbar {
     left: -0.1em;
     width: 100%;
     z-index: 69;
+    animation-name: slide;
+    animation-duration: 0.5s;
 }
 
 ul#navbar li {
@@ -21,17 +23,25 @@ ul#navbar li {
 /* media juttu joka tunnistaa onko hiiri käytössä */
 @media (pointer: fine) {
     ul#navbar {
-        top: -60px;
-    }
+    position: fixed;
+    transform: translateY(-60px);
+    transition: transform 0.167s ease;
+}
 }
 
-@media (pointer: fine) {
-    ul#navbar:hover {
-        top: auto;
-        margin: 0;
-        padding: 0;
-    }
+ul#navbar:hover {
+    transform: translateY(0);
 }
+
+@keyframes slide {
+        from {
+            top: -60px;
+        }
+
+        to {
+            top: 0;
+        }
+    }
 
 img#navimg {
     width: 40px;
@@ -73,21 +83,26 @@ img#navimg {
         top: 27px;
         left: 10px;
     }
+
     .tuloksettext {
         top: 27px;
         left: 87px;
     }
+
     .kalapelitext {
         top: 27px;
         left: 165px;
     }
+
     .tietojatext {
         top: 27px;
         left: 235px;
     }
+
     img#navimg {
         width: 35px;
         height: 35px;
         margin: 20px;
     }
 }
+

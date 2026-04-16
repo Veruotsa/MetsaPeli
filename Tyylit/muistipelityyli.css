@@ -83,3 +83,15 @@ h2 {
         transform: translate(-50%, -50%);
     }
 }
+
+#spacebox {
+    display: none;
+}
+
+@media (pointer: coarse) {
+    #spacebox {
+        display: block;
+        height: 70px;
+        
+    }
+}
