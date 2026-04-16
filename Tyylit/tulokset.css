@@ -1,50 +1,50 @@
-body{
-    display:flex;
+body {
+    display: flex;
     flex-direction: column;
-    background-image:url(../Kuvat/nickype-tree-trunk-4545438.jpg);
+    background-image: url(../Kuvat/nickype-tree-trunk-4545438.jpg);
     background-size: cover;
     z-index: -1;
 }
 
-main{
+main {
     display: flex;
-    flex:1;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    gap:1rem;
+    gap: 1rem;
     height: auto;
     min-height: 80vh;
 }
 
-.resultbox{
-    padding:1rem;
-    border: 4px,solid black;
+.resultbox {
+    padding: 1rem;
+    border: 4px, solid black;
     border-color: black;
     text-align: center;
     border-radius: 10px;
 }
 
-#tulosrakenne{
+#tulosrakenne {
     display: grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    width:100%;
+    width: 100%;
     max-width: 1000px;
 }
 
-#yleistulos{
+#yleistulos {
     background-color: gray;
     padding: 2rem;
-    border:3px solid black;
+    border: 3px solid black;
     width: 35vw;
     min-width: 200px;
     align-items: center;
     border-radius: 10px;
 }
 
-button{
-    background-color:rgb(140, 20, 20);
+button {
+    background-color: rgb(140, 20, 20);
     border: 5px solid black;
     width: 150px;
     height: 150px;
@@ -52,18 +52,47 @@ button{
     font-style: italic;
 }
 
-#kalatulos{
+#kalatulos {
     background-color: lightblue;
 }
 
-#lintutulos{
+#lintutulos {
     background-color: cyan;
 }
 
-#kasvitulos{
+#kasvitulos {
     background-color: lightgreen;
 }
 
-#elaintulos{
+#elaintulos {
     background-color: lightyellow;
+}
+
+@media (max-width: 800px) {
+    #tulosrakenne {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #tulosrakenne {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    #tulosrakenne {
+        font-size: 0.3rem;
+    }
+}
+
+#spacebox {
+    display: none;
+}
+
+@media (pointer: coarse) {
+    #spacebox {
+        display: block;
+        height: 10vh;
+    }
 }
