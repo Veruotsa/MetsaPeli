@@ -98,7 +98,7 @@ function pistelasku() {
     if (timer <= 25) {
         pisteet = 10;
     } else {
-        pisteet = Math.max(1, 10 - (timer - 25) * 0.2);
+        pisteet = Math.ceil(Math.max(1, 10 - (timer - 25) * 0.2));
     }
     // pisteen tallennus vain jos parempi
     let paras = Number(localStorage.getItem("kasvipeli"));
