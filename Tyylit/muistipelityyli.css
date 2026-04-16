@@ -34,10 +34,11 @@ div#pisteet {
     z-index: 5;
     position: absolute;
     top: 40%;
-    left: 85%;
+    left: 90%;
     transform: translate(-50%, -50%);
-    height: 6em;
-    width: 9em;
+    height: auto;
+    width: auto;
+    padding: 5px;
     background-color: cyan;
     display: flex;
     border-radius: 5px;
@@ -52,26 +53,6 @@ h2 {
     margin: 0;
 }
 
-@media (max-width: 900px) {
-    div#pisteet {
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -90%);
-    }
-
-    div#pelialue {
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -40%);
-    }
-
-    button#uusinta {
-        top: 90%;
-        left: 35%;
-        transform: translate(-50%, -90%);
-    }
-}
-
 #uusinta {
     height: 4em;
     width: 4em;
@@ -81,10 +62,36 @@ h2 {
     cursor: pointer;
 }
 
-@media (max-width: 1600px) {
+@media (max-aspect-ratio: 1/1) {
     div#pisteet {
         top: 95%;
         left: 50%;
         transform: translate(-50%, -90%);
+    }
+}
+
+@media (max-width: 700px) {
+    #pisteet {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-height: 400px) {
+    div#pelialue {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#spacebox {
+    display: none;
+}
+
+@media (pointer: coarse) {
+    #spacebox {
+        display: block;
+        height: 70px;
+        
     }
 }
