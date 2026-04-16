@@ -4,6 +4,12 @@
     width: 100%;
     max-width: 100%;
     margin: auto;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
 }
 
 #vesi {
@@ -78,7 +84,7 @@
 .correct { border: 3px solid lime !important; }
 .wrong { border: 3px solid red !important; }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .game-container {
         position: relative;
         width: 100%;
@@ -178,7 +184,7 @@
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 900px) and (max-width: 1024px) {
  
     .game-container {
         display: flex;
