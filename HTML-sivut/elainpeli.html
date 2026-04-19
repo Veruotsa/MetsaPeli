@@ -9,74 +9,51 @@
     <link rel="stylesheet" href="../Tyylit/stylenav.css">
    </head>
 <body>
-    <div>
-        <ul id="navbar">
-            <li><a href="../HTML-sivut/etusivu.html"><img src="../Kuvat/leaf.png" alt="Etusivu" id="navimg"></a></li>
-            <a href="../HTML-sivut/etusivu.html" class="etusivutext">Etusivu</a>
+    <body>
 
-            <li><a href="../HTML-sivut/tulokset.html"><img src="../Kuvat/sun.png" alt="Tulokset" id="navimg"></a></li>
-            <a href="../HTML-sivut/tulokset.html" class="tuloksettext">Tulokset</a>
+    <ul id="navbar">
+        <li><a href="../HTML-sivut/etusivu.html"><img src="../Kuvat/leaf.png" alt="Etusivu" id="navimg"></a></li>
+        <a href="../HTML-sivut/etusivu.html" class="etusivutext">Etusivu</a>
 
-            <li><a href="../HTML-sivut/pelinavigointi.html"><img src="../Kuvat/fish.png" alt="Pelit" id="navimg"></a>
-            </li>
-            <a href="../HTML-sivut/pelinavigointi.html" class="pelittext">Pelit</a>
+        <li><a href="../HTML-sivut/tulokset.html"><img src="../Kuvat/sun.png" alt="Tulokset" id="navimg"></a></li>
+        <a href="../HTML-sivut/tulokset.html" class="tuloksettext">Tulokset</a>
 
-            <li><a href="../HTML-sivut/tietoja.html"><img src="../Kuvat/stump.png" alt="Tietoja" id="navimg"></a></li>
-            <a href="../HTML-sivut/tietoja.html" class="tietojatext">Tietoja</a>
-        </ul>
-     </div>
+        <li><a href="../HTML-sivut/pelinavigointi.html"><img src="../Kuvat/fish.png" alt="Pelit" id="navimg"></a>
+        </li>
+        <a href="../HTML-sivut/pelinavigointi.html" class="pelittext">Pelit</a>
 
-    
+        <li><a href="../HTML-sivut/tietoja.html"><img src="../Kuvat/stump.png" alt="Tietoja" id="navimg"></a></li>
+        <a href="../HTML-sivut/tietoja.html" class="tietojatext">Tietoja</a>
+    </ul>
 
 
-    
     <main>
-        
+
         <div class="game-container">
 
-            <div class="header-row">
+            <h1>Tunnista eläin</h1>
 
-                <button class="title-btn">
-                    Tunnista eläin
-                </button>
-
-                <div class="timer box">
-                    <div id="questionCounter"></div>
-                    <div id="time">
-                    
-                    </div>
-                </div>
-
-                <div class="image-box">
-                    <img id="animalimage" src="" alt="animal-image">
-                </div>                >
+            <div class="timer-box">
+                <div id="questionCounter">0/6</div>
+                <div id="time">0:00</div>
             </div>
-            
 
-                    
+            <div class="image-box">
+                <img id="animalImage" src="" alt="animal image">
+            </div>
+
+            <input type="text" id="answerInput" placeholder="Kirjoita eläin...">
+
+            <button id="checkBtn">Tarkista vastaus</button>
 
         </div>
-
-        
-    <input
-        type="text"
-        id="answerInput"
-        class="answer-box"
-        placeholder="Kirjoita eläin..."
-    >
-
-         <button
-        onclick="checkAnswer()"
-        class="check-btn"
-    >
-        Tarkista vastaus
-        </button>
-        
-
     </main>
-     <footer>
+    <script src="../HTML-sivut/elainpeli.html"></script>
+    <footer>
         <p><strong>Tekijät:</strong> Vertti Ruotsala, Niko Haataja, Matti Komulainen ja Otto Matikainen</p>
-        <p>© 2026 Metsäpeli - Lisensoitu <a href="https://creativecommons.org/licenses/by/4.0/deed.fi" target="_blank" rel="License noopener noreferrer"> CC BY 4.0</a> -lisenssillä</p>
+        <p>© 2026 Metsäpeli - Lisensoitu <a href="https://creativecommons.org/licenses/by/4.0/deed.fi" target="_blank"
+                rel="License noopener noreferrer"> CC BY 4.0</a> -lisenssillä</p>
     </footer>
 </body>
+
 </html>

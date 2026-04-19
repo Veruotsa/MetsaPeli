@@ -1,10 +1,10 @@
 const animals = [
-  { image: "../kuvat/karhu.png", answer: "karhu" },
-  { image: "../kuvat/ilves.jpg", answer: "ilves" },
-  { image: "../kuvat/ahma.jpg", answer: "ahma" },
-  { image: "../kuvat/susi.jpg", answer: "susi" },
-  { image: "../kuvat/orava.jpg", answer: "orava" },
-  { image: "../kuvat/kettu2.jpg", answer: "kettu" }
+  { img: "../kuvat/karhu.png", answer: "karhu" },
+  { img: "../kuvat/ilves.jpg", answer: "ilves" },
+  { img: "../kuvat/ahma.jpg", answer: "ahma" },
+  { img: "../kuvat/susi.jpg", answer: "susi" },
+  { img: "../kuvat/orava.jpg", answer: "orava" },
+  { img: "../kuvat/kettu.jpg", answer: "kettu" }
 ];
 
 animals.sort(() => Math.random() - 0.5);
@@ -12,46 +12,54 @@ animals.sort(() => Math.random() - 0.5);
 let currentIndex = 0;
 let score = 0;
 
-const animalImage = document.getElementById("animalimage");
-const answerInput = document.getElementById("answerInput");
+const image = document.getElementById("animalImage");
+const input = document.getElementById("answerInput");
 const playTime = document.getElementById("time");
 const questionCounter = document.getElementById("questionCounter");
-//const answerAlert = document.getElementById("answerAlert");
 
-animalImage.src = animals[currentIndex].image;
-
-
-
+function showNewImage() {
+  image.src = animals[currentIndex].img;
+  questionCounter.textContent = `${score}/6`;
+}
+showNewImage();
 
 let seconds = 0;
+
+
 setInterval(() => {
   seconds++;
-  const minutes = String(Math.floor(seconds / 60)).padStart(2, '0');
-  const seconds = String(seconds % 60).padStart(2, '0');
-  document.getElementById("time").textContent = `${minutes}:${seconds}`;
+  const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+  const sec = String(seconds % 60).padStart(2, '0');
+  document.getElementById("time").textContent = `${min}:${sec}`;
 }, 1000);
 
-
-function checkAnswer() {
-  const userAnswer = answerInput.value.trim().toLowerCase();
-  const correctAnswer = animals[currentIndex].answer.toLowerCase();
+document.getElementById("checkBtn").addEventListener("click", checkAnswer);
+function checkAnswer() 
+{
+  const userAnswer = input.value.trim().toLowerCase();
+  const correctAnswer = animals[currentIndex].answer;
 
   if (userAnswer === correctAnswer) {
     score++;
     currentIndex++;
-
-    questionCounter.textContent = `${score}/6`;
-    //answerAlert.textContent = "Correct!";
-    //answerAlert.style.color = "green";
+    alert("Oikein!");
 
     if (currentIndex < animals.length) {
-      animalImage.src = animals[currentIndex].image;
-      answerInput.value = "";
+      showNewImage();
+      input.value = "";
     } else {
-      //feedbackEl.textContent = "Finished! 🎉";
+      alert(`Valmista tuli! Sait ${score}/${animals.length} ajassa ${seconds} sekuntia!`);
+
+      currentIndex = 0;
+      score = 0;
+      animals.sort(() => Math.random() - 0.5);
+      showNewImage();
+      input.value = "";
+      seconds = 0;
+
     }
   } else {
-    //feedbackEl.textContent = "Wrong, try again!";
-    //feedbackEl.style.color = "red";
+    alert("Väärin, Yritä uudestaan!");
+    input.value = "";
   }
-}
+} 
