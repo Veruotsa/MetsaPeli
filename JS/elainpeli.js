@@ -1,10 +1,11 @@
+console.log("JS käynnistyi");
 const animals = [
-  { img: "../kuvat/karhu.png", answer: "karhu" },
-  { img: "../kuvat/ilves.jpg", answer: "ilves" },
-  { img: "../kuvat/ahma.jpg", answer: "ahma" },
-  { img: "../kuvat/susi.jpg", answer: "susi" },
-  { img: "../kuvat/orava.jpg", answer: "orava" },
-  { img: "../kuvat/kettu.jpg", answer: "kettu" }
+  { img: "../Kuvat/karhu.png", answer: "karhu" },
+  { img: "../Kuvat/ilves.jpg", answer: "ilves" },
+  { img: "../Kuvat/ahma.jpg", answer: "ahma" },
+  { img: "../Kuvat/susi.jpg", answer: "susi" },
+  { img: "../Kuvat/orava.jpg", answer: "orava" },
+  { img: "../Kuvat/kettu2.jpg", answer: "kettu" }
 ];
 
 animals.sort(() => Math.random() - 0.5);
@@ -19,7 +20,7 @@ const questionCounter = document.getElementById("questionCounter");
 
 function showNewImage() {
   image.src = animals[currentIndex].img;
-  questionCounter.textContent = `${score}/6`;
+  questionCounter.textContent = `${currentIndex + 1}/6`;
 }
 showNewImage();
 
