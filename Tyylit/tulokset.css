@@ -50,6 +50,8 @@ button {
     height: 150px;
     border-radius: 100px;
     font-style: italic;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
 }
 
 #kalatulos {

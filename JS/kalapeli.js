@@ -51,6 +51,9 @@ checkBtn.addEventListener('click', () => {
     });
 
     scoreDisplay.innerText = correctCount + " / 5 (Yritykset: " + tries + ")";
+
+    localStorage.setItem('kalaPeliPisteet', correctCount);
+    localStorage.setItem('kalaPeliYritykset', tries);
 });
 
 retryBtn.addEventListener('click', () => {
@@ -59,7 +62,7 @@ retryBtn.addEventListener('click', () => {
         originalParent.appendChild(draggable);
     });
 
-    // Nollataan laatikoiden värit
+
     containers.forEach(container => {
         container.className = 'drop-zone';
     });
