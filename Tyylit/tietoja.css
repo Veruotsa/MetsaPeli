@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+
+#taustakuva {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    display: block;
+}
+
+#credits {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+}
+
+.tekija {
+    
+}
