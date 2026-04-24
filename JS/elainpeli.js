@@ -63,4 +63,9 @@ function checkAnswer()
     alert("Väärin, Yritä uudestaan!");
     input.value = "";
   }
+
+  scoreDisplay.innerText = "0 / 5 (Yritykset: " + tries + ")";
+
+  localStorage.getItem('elainPeliPisteet', correntCount);
+  localStorage.setItem("elainPeliPisteet", tries);
 } 
