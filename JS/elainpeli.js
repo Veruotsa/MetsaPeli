@@ -64,8 +64,8 @@ function checkAnswer()
     input.value = "";
   }
 
-  scoreDisplay.innerText = "0 / 5 (Yritykset: " + tries + ")";
+  scoreDisplay.innerText = "0 / 6 (Yritykset: " + tries + ")";
 
-  localStorage.getItem('elainPeliPisteet', correntCount);
+  localStorage.getItem('elainPeliPisteet', currentCount);
   localStorage.setItem("elainPeliPisteet", tries);
 } 
