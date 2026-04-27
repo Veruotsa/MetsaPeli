@@ -11,18 +11,30 @@ const animals = [
 animals.sort(() => Math.random() - 0.5);
 
 let currentIndex = 0;
-let score = 0;
+let currentScore = 0;
 
 const image = document.getElementById("animalImage");
 const input = document.getElementById("answerInput");
 const playTime = document.getElementById("time");
 const questionCounter = document.getElementById("questionCounter");
+const scoreDisplay = document.getElementById("score");
+
+let lastScore = localStorage.getItem("score");
+let lastTime = localStorage.getItem("elainPeliAika")
+
+if (lastScore === null){
+  scoreDisplay.innerText = "Edelliset pisteet: 0 pistettä ajassa 0 sekuntia";
+} else {
+  scoreDisplay.innerText = 'Edelliset pisteet: ${lastScore} pistettä ajassa ${lastTime} sekuntia';
+}
+
 
 function showNewImage() {
   image.src = animals[currentIndex].img;
-  questionCounter.textContent = `${currentIndex + 1}/6`;
+  questionCounter.textContent = `${currentScore}/6`;
 }
 showNewImage();
+
 
 let seconds = 0;
 
@@ -35,24 +47,38 @@ setInterval(() => {
 }, 1000);
 
 document.getElementById("checkBtn").addEventListener("click", checkAnswer);
-function checkAnswer() 
-{
+document.getElementById("resetBtn").addEventListener("click", reset);
+
+function reset(){
+  localStorage.setItem("elainPeliPisteet", 0);
+  localStorage.setItem("elainPeliAika", 0);
+  scoreDisplay.innerText = "Edelliset pisteet: 0 pistettä ajassa 0 sekuntia";
+  currentIndex = 0;
+  currentScore = 0;
+  animals.sort(() => Math.random() - 0.5);
+  showNewImage();
+  input.value = "";
+  seconds = 0;
+}
+
+function checkAnswer() {
   const userAnswer = input.value.trim().toLowerCase();
   const correctAnswer = animals[currentIndex].answer;
 
   if (userAnswer === correctAnswer) {
-    score++;
+    currentScore++;
     currentIndex++;
-    alert("Oikein!");
+    
 
     if (currentIndex < animals.length) {
       showNewImage();
       input.value = "";
     } else {
-      alert(`Valmista tuli! Sait ${score}/${animals.length} ajassa ${seconds} sekuntia!`);
-
+      localStorage.setItem("elainPeliPisteet", currentScore);
+      localStorage.setItem("elainPeliAika", seconds);
+      scoreDisplay.innerText = `Edelliset pisteet: ${currentScore} pistettä ajassa ${seconds} sekuntia`;
       currentIndex = 0;
-      score = 0;
+      currentScore = 0;
       animals.sort(() => Math.random() - 0.5);
       showNewImage();
       input.value = "";
@@ -63,9 +89,4 @@ function checkAnswer()
     alert("Väärin, Yritä uudestaan!");
     input.value = "";
   }
-
-  scoreDisplay.innerText = "0 / 6 (Yritykset: " + tries + ")";
-
-  localStorage.getItem('elainPeliPisteet', currentCount);
-  localStorage.setItem("elainPeliPisteet", tries);
-} 
+}
