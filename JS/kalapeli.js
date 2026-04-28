@@ -3,13 +3,23 @@ const containers = document.querySelectorAll('.drop-zone');
 const checkBtn = document.getElementById('check-btn');
 const retryBtn = document.getElementById('retry');
 const scoreDisplay = document.getElementById('score');
+const timerDisplay = document.getElementById('timer');
 
 const originalParents = new Map();
 draggables.forEach(draggable => {
     originalParents.set(draggable, draggable.parentElement);
 });
 
+const interval = setInterval(() => {
+    if (timerActive) {
+        seconds++;
+        timerDisplay.innerText = seconds;
+    }
+}, 1000);
+
 let tries = 0;
+let seconds = 0;
+let timerActive = true;
 
 draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', () => {
@@ -35,6 +45,8 @@ containers.forEach(container => {
 });
 
 checkBtn.addEventListener('click', () => {
+    timerActive = false;
+
     let correctCount = 0;
     tries++;
 
@@ -57,6 +69,11 @@ checkBtn.addEventListener('click', () => {
 });
 
 retryBtn.addEventListener('click', () => {
+
+    seconds = 0;
+    timerDisplay.innerText = seconds;
+    timerActive = true;
+
     draggables.forEach(draggable => {
         const originalParent = originalParents.get(draggable);
         originalParent.appendChild(draggable);
