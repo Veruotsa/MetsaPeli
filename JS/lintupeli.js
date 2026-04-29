@@ -146,10 +146,8 @@ function tarkistetaan(kohta, klikattu){
     if (kohta === nykyinen.oikea){
         pisteet += 1;
         klikattu.classList.add("oikein")
-        console.log("Oikein!!")
     }
     else{
-        console.log("Väärin!!")
         klikattu.classList.add("vaarin")
     }
     document.getElementById("pistearvo").textContent = pisteet;
@@ -166,7 +164,7 @@ function tarkistetaan(kohta, klikattu){
         } else {
             tulokset();
         }
-    }, 3000);
+    }, 1000);
 }
 
 function tulokset() {
@@ -181,4 +179,7 @@ function tulokset() {
     `;
 
     document.getElementById("pistebox").style.display = "none";
+    let lintuPeliPisteet = pisteet
+    tallenna(lintuPeliPisteet,pisteet)
+
 }

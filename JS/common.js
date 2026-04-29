@@ -17,7 +17,7 @@ function tallenna(pelinimi, pisteet) {
 function haepisteet(){
     pelipisteet={}
     for(let nimi of pelit){
-        let = tilanne = localStorage.getItem(nimi)
+        let tilanne = localStorage.getItem(nimi)
         let = pelipisteet[nimi] = tilanne
 
     }
