@@ -60,13 +60,12 @@ body {
 
 
 .draggable {
-    padding: 0.9rem 1rem;
+    padding: 0.9em;
     background: white;
     border: 2px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: grab;
     border-radius: 5px;
-    backdrop-filter: blur(3px);
     text-align: center;
 }
 
@@ -74,7 +73,7 @@ body {
 .controls {
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    right: 3%;
     z-index: 5;
     background: rgb(255, 255, 255);
     padding: 1%;
