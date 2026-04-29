@@ -76,7 +76,7 @@ const kysymykset = [
     },
     {
         
-        kysymys:"Jos kuulet metsästä toistuvaa rummutusta mikä lintu on todennäköisesti syypää?",
+        kysymys:"Jos kuulet metsästä toistuvaa rummutusta niin, mikä lintu on todennäköisesti tähän syypää?",
         vaihtoehdot:["Varis","Pöllö","Tikka","Tiainen"],
         oikea:2,
         
@@ -164,7 +164,7 @@ function tarkistetaan(kohta, klikattu){
         } else {
             tulokset();
         }
-    }, 1000);
+    }, 1500);
 }
 
 function tulokset() {
