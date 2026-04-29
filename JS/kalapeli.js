@@ -86,3 +86,7 @@ retryBtn.addEventListener('click', () => {
 
     scoreDisplay.innerText = "0 / 5 (Yritykset: " + tries + ")";
 });
+
+//Lähteitä//
+//https://medium.com/@a1guy/building-drag-drop-zones-with-vanilla-javascript-b484a605a7c3//
+//https://www.w3schools.com/js/js_syntax.asp//
