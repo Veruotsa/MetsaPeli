@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 #tausta {
@@ -30,8 +31,13 @@ body {
     padding: 20px;
     border-radius: 5px;
     height: 20vh;
-    min-width: auto;
+    min-width: 150px;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+footer {
+    margin: 0;
 }

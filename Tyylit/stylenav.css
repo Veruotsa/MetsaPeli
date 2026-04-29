@@ -14,6 +14,7 @@ ul#navbar {
     z-index: 69;
     animation-name: slide;
     animation-duration: 0.5s;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 ul#navbar li {

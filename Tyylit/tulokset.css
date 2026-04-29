@@ -5,6 +5,7 @@ body {
     background-size: cover;
     z-index: -1;
     min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 main {
@@ -70,6 +71,7 @@ button {
 #elaintulos {
     background-color: lightyellow;
 }
+
 
 @media (max-width: 800px) {
     #tulosrakenne {
