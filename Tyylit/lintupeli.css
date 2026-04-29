@@ -7,6 +7,7 @@ body {
     z-index: -1;
     margin: 0;
     font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100vh;
 }
 
 main {

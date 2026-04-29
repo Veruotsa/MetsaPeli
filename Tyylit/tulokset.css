@@ -4,6 +4,7 @@ body {
     background-image: url(../Kuvat/nickype-tree-trunk-4545438.jpg);
     background-size: cover;
     z-index: -1;
+    min-height: 100vh;
 }
 
 main {

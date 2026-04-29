@@ -179,7 +179,6 @@ function tulokset() {
     `;
 
     document.getElementById("pistebox").style.display = "none";
-    let lintuPeliPisteet = pisteet
-    tallenna(lintuPeliPisteet,pisteet)
+    tallenna('lintuPeliPisteet', pisteet);
 
 }
