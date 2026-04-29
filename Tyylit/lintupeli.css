@@ -18,7 +18,6 @@ main {
     justify-content: center;
     padding: 2rem;
     gap: 1.5rem;
-    height: 90%;
 }
 
 .gamebox {
@@ -39,8 +38,6 @@ main {
     width: 100%;
     max-width: 80vw;
     place-items: center;
-    row-gap: 100px;
-    column-gap: 200px;
 }
 
 #info {
@@ -160,6 +157,9 @@ main {
 
 #loppuruutu {
     background-color:rgba(255, 248, 240, 0.97);
+    align-self: center;
+    justify-self: center;
+
 }
 
 #loppuruutu h1 {
@@ -172,8 +172,8 @@ main {
     color: #333;
     font-size: 1.1rem;
     margin: 1rem 0;
+    align-self: center;
 }
-
 .vastaa {
     padding: 0.8rem 1.6rem;
     background-color: #4a7023;
