@@ -60,13 +60,24 @@ body {
 
 
 .draggable {
-    padding: 0.9em;
+    padding: 15px 20px;
     background: white;
     border: 2px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: grab;
     border-radius: 5px;
     text-align: center;
+}
+
+.drop-zone .draggable {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+    padding: 0;           
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;      
 }
 
 
