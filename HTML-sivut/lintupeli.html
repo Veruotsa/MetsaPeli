@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lintupeli</title>
+    <link rel="stylesheet" href="../Tyylit/stylenav.css">
+    <link rel="stylesheet" href="../Tyylit/style.css">
+    <link rel="stylesheet" href="../Tyylit/lintupeli.css">
+    <script src="../JS/common.js" defer></script>
+    <script src="../JS/lintupeli.js" defer></script>
+</head>
+<body>
+    <div>
+        <ul id="navbar">
+            <li><a href="../HTML-sivut/etusivu.html"><img src="../Kuvat/leaf.png" alt="Etusivu" id="navimg"></a></li>
+            <a href="../HTML-sivut/etusivu.html" class="etusivutext">Etusivu</a>
+
+            <li><a href="../HTML-sivut/tulokset.html"><img src="../Kuvat/sun.png" alt="Tulokset" id="navimg"></a></li>
+            <a href="../HTML-sivut/tulokset.html" class="tuloksettext">Tulokset</a>
+
+            <li><a href="../HTML-sivut/pelinavigointi.html"><img src="../Kuvat/fish.png" alt="Pelit" id="navimg"></a>
+            </li>
+            <a href="../HTML-sivut/pelinavigointi.html" class="pelittext">Pelit</a>
+
+            <li><a href="../HTML-sivut/tietoja.html"><img src="../Kuvat/stump.png" alt="Tietoja" id="navimg"></a></li>
+            <a href="../HTML-sivut/tietoja.html" class="tietojatext">Tietoja</a>
+        </ul>
+    </div>
+
+
+<main>
+    <div id="pelirakenne">
+
+
+        <div id="info" class="gamebox">
+            <h1 class="otsikko" id="intro">Tervetuloa lintupeliin</h1>
+            <p id="kuvaus">Tässä pelissä tutustutaan erilaisten suomesta löytyvien lintujen tapoihin. Tavoitteenasi on yrittää tunnistaa lintu kuvauksen perusteella. Onnea matkaan!</p>
+            <div id="kuvaboxi" class="gamebox">
+                <img id="lintukuva" src="" alt="pelikuva" class="piilossa">
+            </div>
+        </div>
+        
+
+
+        <div id="ansbox" class="gamebox">
+            <div id="vaihtoehdot"></div>
+            <button id="aloitus" >Aloita peli</button>
+            <button id="seuraava" class="piilossa">Seuraava kysymys</button>
+        </div>
+
+
+    </div>
+    
+    <div id="pistebox" class="gamebox">
+            <p>Pisteet: <span id="pistearvo">0</span></p>
+        </div>
+
+
+
+
+</main>
+
+
+    <div class="footer-content">
+        <footer>
+            <p><strong>Tekijät:</strong> Vertti Ruotsala, Niko Haataja, Matti Komulainen ja Otto Matikainen</p>
+            <p>© 2026 Metsäpeli - Lisensoitu <a href="https://creativecommons.org/licenses/by/4.0/deed.fi"
+                    target="_blank" rel="License noopener noreferrer"> CC BY 4.0</a> -lisenssillä</p>
+        </footer>
+    </div>
+
+</body>
+</html>
