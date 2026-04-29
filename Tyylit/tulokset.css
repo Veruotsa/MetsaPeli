@@ -36,6 +36,7 @@ main {
 }
 
 #yleistulos {
+    margin-top: 3rem;
     background-color: gray;
     padding: 2rem;
     border: 3px solid black;
